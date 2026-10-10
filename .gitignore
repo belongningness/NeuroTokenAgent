@@ -1,0 +1,84 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# JavaScript dependencies and build output
+node_modules/
+.next/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+
+# Rust and Tauri build output
+target/
+release-artifacts/
+CodexMonitor.zip
+
+# NeuroToken data, models, and runtime artifacts
+outputs/
+reports/
+runs/
+attempts/
+verify_results/
+verify_*/
+data/
+checkpoints/
+external/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.parquet
+*.tar
+*.tar.gz
+*.zip
+.langgraph_api/
+.codex-worktrees/
+.codexmonitor/
+.agent/
+.agents/
+.claude/
+.cursor/
+
+# Logs and temporary files
+*.log
+*.out
+*.tmp
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Platform-specific local configuration
+neurotoken-desktop/src-tauri/tauri.ios.local.conf.json
+neurotoken-desktop/.testflight.local.env
+neurotoken-desktop/public/assets/material-icons/
+neurotoken-desktop/result
+neurotoken-desktop/skills-lock.json
+
+# Agent-local runtime configuration
+agent/agent_pipeline/configs/llm_env.json

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "task_id": "adapter-task-001",
+  "thread_id": "langgraph-thread-001",
+  "revision": 1,
+  "status": "ready_for_coding",
+  "adapter": {
+    "name": "example_eeg",
+    "modality": "eeg",
+    "notes": "Read channel metadata from HDF5 attributes."
+  },
+  "allowed_paths": ["agent_pipeline/adapters/"],
+  "instruction": "Implement the example EEG adapter.",
+  "created_at": "2026-08-04T07:00:00Z"
+}

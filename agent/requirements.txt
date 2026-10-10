@@ -1,0 +1,25 @@
+# NeuroToken agent project dependencies
+# Generated for /home/luyilin/braintoken/agent
+# Python 3.10+ for pipeline scripts. Agent Server uses Python 3.11+ via pyproject.toml.
+
+# Agent / LLM orchestration
+langgraph
+langchain
+langchain-openai
+pydantic==2.11.4
+
+# Scientific data processing
+numpy==1.26.4
+pandas==2.2.3
+h5py
+
+# Dataset packaging
+webdataset
+
+# Tokenization / reconstruction scripts
+torch==2.5.1
+tqdm==4.67.1
+
+# Validation and config parsing
+jsonschema==4.23.0
+tomli==2.0.1; python_version < "3.11"

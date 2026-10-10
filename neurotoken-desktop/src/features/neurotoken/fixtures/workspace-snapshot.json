@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "mode": "awaiting_plan_approval",
+  "intent": "execute",
+  "is_working": false,
+  "plan": {
+    "stages": ["preflight", "tokenize"],
+    "input_path": "/datasets/example.h5",
+    "output_path": "/outputs/example",
+    "adapter": "example_eeg"
+  },
+  "run": {
+    "workflow_id": null,
+    "run_id": null,
+    "report_root": null,
+    "config_path": null
+  },
+  "stages": [
+    { "name": "preflight", "status": "pending", "duration_seconds": null },
+    { "name": "tokenize", "status": "pending", "duration_seconds": null }
+  ],
+  "artifacts": [],
+  "approval": {
+    "kind": "plan_approval",
+    "title": "Confirm pipeline plan",
+    "stage": null,
+    "request_id": null
+  },
+  "error": null
+}

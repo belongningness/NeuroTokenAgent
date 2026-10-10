@@ -1,0 +1,62 @@
+# Example config for EEG HDF5 files.
+# Relative paths are resolved from this file's directory.
+
+[dataset]
+name = "EEG_H5"
+modality = "eeg"
+task_type = "EEG"
+description = "EEG sessions stored as intermediate HDF5 files."
+
+[paths]
+h5_root = "../../data/eeg/h5"
+tar_root = "../../outputs/eeg_h5_tar"
+token_root = "../../outputs/eeg_h5_neurotoken"
+report_root = "../../outputs/eeg_h5_reports"
+
+[source]
+adapter = "eeg_h5"
+
+[source_h5]
+signal_key = "eeg"
+sfreq_key = "metadata/sfreq"
+channel_key = "metadata/channel"
+subject_key = "metadata/subject"
+event_key = "event"
+
+[event]
+type = "image"
+# type_source_column = ""
+# value_source_column = ""
+
+[chunking]
+strategy = "rest"
+split_points = 30000
+downsample_factor = 8
+
+[tokenizer]
+project_root = "../../external/unitok"
+checkpoint_root = "../../checkpoints/tok-0507-16-rope-ft"
+checkpoint_path = ""
+train_config = "../../external/unitok/hdata/configs/tok_human.yaml"
+use_ema = true
+storage_dtype = "fp16"
+data_seed = 42
+max_chunk_batch_size = 8
+
+[runtime]
+device = "auto"
+use_bfloat16 = false
+
+[release]
+dataset_name = "EEG_H5"
+description = "EEG sessions stored as intermediate HDF5 files."
+tokenizer_version = "tok-0507-16-rope-ft/0030000_final"
+
+[validation]
+check_event_duration_semantics = false
+
+[reconstruction]
+max_sessions = 1
+max_samples = 30
+max_chunk_batch_size = 8
+min_mean_pearson = 0.0

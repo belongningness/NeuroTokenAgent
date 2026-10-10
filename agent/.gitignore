@@ -1,0 +1,36 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pipeline outputs and reports
+outputs/
+demo/outputs/
+agent_pipeline/outputs/
+agent_pipeline/reports/
+reports/
+
+# Local LLM/runtime secrets
+agent_pipeline/configs/llm_env.json
+.env
+
+# LangGraph local runtime
+.langgraph_api/
+
+# Logs
+*.log
